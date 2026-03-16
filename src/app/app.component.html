@@ -1,0 +1,84 @@
+<!-- Navigation -->
+<app-navbar
+  brandName="LiveStreamPro"
+  brandAccent=".ai"
+  [links]="navLinks"
+  ctaLabel="Start Free Trial"
+  ctaHref="#"
+/>
+
+<!-- Hero Section -->
+<app-hero
+  badge="Now in Public Beta"
+  headlineStart="Stream Smarter with"
+  headlineAccent="AI-Powered"
+  headlineEnd="Production Tools"
+  description="LiveStreamPro.ai gives creators studio-grade production, real-time AI overlays, and audience analytics."
+  primaryCtaLabel="Start Streaming Free"
+  primaryCtaHref="#"
+  secondaryCtaLabel="Watch Demo"
+  secondaryCtaHref="#"
+/>
+
+<!-- Logo Cloud / Social Proof -->
+<app-logo-cloud headline="Trusted by teams at" [logos]="trustedLogos" />
+
+<!-- Features Section -->
+<div id="features">
+  <app-features-section
+    sectionLabel="Features"
+    headline="Everything You Need to Go Live"
+    subheadline="From AI-powered scene switching to real-time analytics, we handle the production so you can focus on your content."
+    [features]="features"
+  />
+</div>
+
+<!-- Stats Section -->
+<app-stats-section [stats]="stats" />
+
+<!-- How It Works -->
+<app-how-it-works-section
+  sectionLabel="How It Works"
+  headline="Go Live in Three Simple Steps"
+  subheadline="No complex setup. No downloads. Just connect and stream."
+  [steps]="steps"
+/>
+
+<!-- Pricing Section -->
+<div id="pricing">
+  <app-pricing-section
+    sectionLabel="Pricing"
+    headline="Simple, Transparent Pricing"
+    subheadline="Start free. Upgrade when you need more power. No hidden fees, cancel anytime."
+    [plans]="pricingPlans"
+  />
+</div>
+
+<!-- Testimonials Section -->
+<div id="testimonials">
+  <app-testimonials-section
+    sectionLabel="Testimonials"
+    headline="Loved by Creators Worldwide"
+    subheadline="Join thousands of streamers who switched to LiveStreamPro.ai and never looked back."
+    [testimonials]="testimonials"
+  />
+</div>
+
+<!-- CTA Section -->
+<app-cta-section
+  headline="Ready to Level Up Your Stream?"
+  description="Join 50,000+ creators already using LiveStreamPro.ai. Start your free trial today."
+  primaryCtaLabel="Start Free Trial"
+  primaryCtaHref="#"
+  secondaryCtaLabel="Talk to Sales"
+  secondaryCtaHref="#"
+/>
+
+<!-- Footer -->
+<app-footer
+  brandName="LiveStreamPro"
+  brandAccent=".ai"
+  tagline="AI-powered live streaming for the next generation of creators."
+  [linkGroups]="footerLinkGroups"
+  [socialLinks]="socialLinks"
+/>

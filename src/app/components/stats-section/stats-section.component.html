@@ -1,0 +1,21 @@
+<section class="relative border-y border-white/[0.06] bg-white/[0.01] py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div *ngFor="let stat of stats" class="text-center">
+        <div
+          class="text-4xl font-extrabold tracking-tight text-white lg:text-5xl"
+        >
+          {{ stat.value
+          }}<span
+            *ngIf="stat.suffix"
+            class="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent"
+            >{{ stat.suffix }}</span
+          >
+        </div>
+        <div class="mt-2 text-sm font-medium text-slate-500">
+          {{ stat.label }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

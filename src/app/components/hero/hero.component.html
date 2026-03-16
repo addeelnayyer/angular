@@ -1,0 +1,206 @@
+<section class="relative overflow-hidden pb-20 pt-32 lg:pb-32 lg:pt-40">
+  <!-- Background Effects -->
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
+      <div
+        class="h-[600px] w-[600px] rounded-full bg-violet-600/20 blur-[128px]"
+      ></div>
+    </div>
+    <div class="absolute right-0 top-1/4">
+      <div
+        class="h-[400px] w-[400px] rounded-full bg-fuchsia-600/15 blur-[100px]"
+      ></div>
+    </div>
+    <div class="absolute bottom-0 left-0">
+      <div
+        class="h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[80px]"
+      ></div>
+    </div>
+    <!-- Grid pattern -->
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDBoNjB2NjBIMHoiLz48cGF0aCBkPSJNNjAgMEgwdjYwaDYwVjB6TTU5IDFIMXY1OGg1OFYxeiIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvZz48L3N2Zz4=')] opacity-40"
+    ></div>
+  </div>
+
+  <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <!-- Badge -->
+      <div
+        class="mb-8 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 text-sm font-medium text-violet-300"
+      >
+        <span class="relative flex h-2 w-2">
+          <span
+            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-75"
+          ></span>
+          <span
+            class="relative inline-flex h-2 w-2 rounded-full bg-violet-500"
+          ></span>
+        </span>
+        {{ badge }}
+      </div>
+
+      <!-- Headline -->
+      <h1
+        class="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl"
+      >
+        {{ headlineStart }}
+        <br />
+        <span
+          class="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent"
+        >
+          {{ headlineAccent }}
+        </span>
+        <br />
+        {{ headlineEnd }}
+      </h1>
+
+      <!-- Description -->
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+        {{ description }}
+      </p>
+
+      <!-- CTA Buttons -->
+      <div
+        class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+      >
+        <a
+          [href]="primaryCtaHref"
+          class="group relative inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-8 py-4 text-base font-semibold text-white shadow-2xl shadow-violet-500/25 transition-all hover:shadow-violet-500/40 hover:brightness-110"
+        >
+          {{ primaryCtaLabel }}
+          <svg
+            class="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </a>
+        <a
+          [href]="secondaryCtaHref"
+          class="group inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-base font-semibold text-slate-300 backdrop-blur-sm transition-all hover:border-white/20 hover:bg-white/10 hover:text-white"
+        >
+          <svg
+            class="h-5 w-5 text-violet-400"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+          {{ secondaryCtaLabel }}
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Image / Dashboard Preview -->
+    <div class="relative mx-auto mt-16 max-w-5xl lg:mt-20">
+      <div
+        class="relative rounded-2xl border border-white/[0.08] bg-gradient-to-b from-white/[0.04] to-transparent p-1.5 shadow-2xl shadow-violet-500/10"
+      >
+        <div class="overflow-hidden rounded-xl bg-[#0d1117]">
+          <!-- Fake browser chrome -->
+          <div
+            class="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3"
+          >
+            <div class="h-3 w-3 rounded-full bg-red-500/80"></div>
+            <div class="h-3 w-3 rounded-full bg-yellow-500/80"></div>
+            <div class="h-3 w-3 rounded-full bg-green-500/80"></div>
+            <div
+              class="ml-4 flex-1 rounded-md bg-white/[0.06] px-3 py-1 text-xs text-slate-500"
+            >
+              app.livestreampro.ai/dashboard
+            </div>
+          </div>
+          <!-- Dashboard mockup content -->
+          <div *ngIf="!heroImageUrl" class="p-6">
+            <div class="grid grid-cols-12 gap-4">
+              <!-- Sidebar -->
+              <div class="col-span-2 space-y-3">
+                <div class="h-8 w-full rounded-lg bg-violet-500/20"></div>
+                <div class="h-6 w-full rounded-md bg-white/[0.04]"></div>
+                <div class="h-6 w-full rounded-md bg-white/[0.04]"></div>
+                <div class="h-6 w-3/4 rounded-md bg-white/[0.04]"></div>
+                <div class="h-6 w-full rounded-md bg-violet-500/10"></div>
+                <div class="h-6 w-full rounded-md bg-white/[0.04]"></div>
+              </div>
+              <!-- Main content area -->
+              <div class="col-span-7 space-y-4">
+                <!-- Video preview -->
+                <div
+                  class="flex aspect-video items-center justify-center rounded-xl bg-gradient-to-br from-violet-900/40 to-fuchsia-900/30 ring-1 ring-white/[0.06]"
+                >
+                  <div
+                    class="flex h-16 w-16 items-center justify-center rounded-full bg-white/10 backdrop-blur"
+                  >
+                    <svg
+                      class="ml-1 h-8 w-8 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <!-- Controls -->
+                <div class="flex gap-3">
+                  <div class="h-10 flex-1 rounded-lg bg-violet-600/30"></div>
+                  <div class="h-10 w-10 rounded-lg bg-red-500/30"></div>
+                  <div class="h-10 w-10 rounded-lg bg-white/[0.06]"></div>
+                  <div class="h-10 w-10 rounded-lg bg-white/[0.06]"></div>
+                </div>
+              </div>
+              <!-- Right panel -->
+              <div class="col-span-3 space-y-3">
+                <div class="rounded-lg bg-white/[0.04] p-3">
+                  <div class="mb-2 h-4 w-20 rounded bg-white/10"></div>
+                  <div class="space-y-2">
+                    <div class="h-3 w-full rounded bg-white/[0.06]"></div>
+                    <div class="h-3 w-4/5 rounded bg-white/[0.06]"></div>
+                    <div class="h-3 w-3/5 rounded bg-white/[0.06]"></div>
+                  </div>
+                </div>
+                <div class="rounded-lg bg-white/[0.04] p-3">
+                  <div class="mb-2 h-4 w-16 rounded bg-violet-400/20"></div>
+                  <div class="flex items-end gap-1">
+                    <div
+                      *ngFor="let h of [40, 65, 45, 80, 55, 70, 90, 60, 75, 50]"
+                      class="flex-1 rounded-t bg-gradient-to-t from-violet-600/40 to-fuchsia-500/40"
+                      [style.height.%]="h"
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  class="rounded-lg bg-gradient-to-br from-violet-600/20 to-fuchsia-600/20 p-3"
+                >
+                  <div class="mb-1 text-xs font-medium text-violet-300">
+                    Live Viewers
+                  </div>
+                  <div class="text-2xl font-bold text-white">12,847</div>
+                  <div class="mt-1 text-xs text-green-400">
+                    ↑ 23% from last stream
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            *ngIf="heroImageUrl"
+            [src]="heroImageUrl"
+            [alt]="heroImageAlt"
+            class="w-full"
+          />
+        </div>
+      </div>
+      <!-- Glow under card -->
+      <div
+        class="absolute -bottom-8 left-1/2 h-32 w-3/4 -translate-x-1/2 rounded-full bg-violet-600/20 blur-3xl"
+      ></div>
+    </div>
+  </div>
+</section>
